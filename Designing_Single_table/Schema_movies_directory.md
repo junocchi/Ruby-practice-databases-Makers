@@ -1,4 +1,4 @@
-# movies_directory Table Design Recipe Template
+# movies Table Design Recipe Template
 
 _Copy this recipe template to design and create a database table from a specification._
 
@@ -61,7 +61,7 @@ release_year: numeric
 
 ```sql
 -- EXAMPLE
--- file: albums_table.sql
+-- file: movies_table.sql
 
 -- Replace the table name, columm names and types.
 -- Dont change the id line.
@@ -83,7 +83,7 @@ CREATE TABLE students (
 ## 5. Create the table.
 
 ```bash
-psql -h 127.0.0.1 database_name < albums_table.sql
+psql -h 127.0.0.1 database_name < movies_table.sql
 ```
 
 or go straight to TablePlus, click 'Command + k' and then create a new database from there.

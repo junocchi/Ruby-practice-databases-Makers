@@ -71,7 +71,7 @@ CREATE TABLE students (
 ## 5. Create the table.
 
 ```bash
-psql -h 127.0.0.1 database_name < albums_table.sql
+psql -h 127.0.0.1 database_name < students_table.sql
 ```
 
 or go straight to TablePlus, click 'Command + k' and then create a new database from there.
