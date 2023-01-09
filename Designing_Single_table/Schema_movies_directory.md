@@ -1,4 +1,4 @@
-# Single Table Design Recipe Template
+# movies_directory Table Design Recipe Template
 
 _Copy this recipe template to design and create a database table from a specification._
 
@@ -8,19 +8,23 @@ _Copy this recipe template to design and create a database table from a specific
 # EXAMPLE USER STORY:
 # (analyse only the relevant part - here the final line).
 
-As a music lover,
-So I can organise my records,
-I want to keep a list of albums' titles.
+As a person who loves movies,
+So I can list all my favourite movies
+I want to see a list of movies' titles.
 
-As a music lover,
-So I can organise my records,
-I want to keep a list of albums' release year.
+As a person who loves movies,
+So I can list all my favourite movies
+I want to see a list of movies' genres.
+
+As a person who loves movies,
+So I can list all my favourite movies
+I want to see a list of movies' release year.
 ```
 
 ```
 Nouns:
 
-album, title, release year
+titles, genres, release_year
 ```
 
 ## 2. Infer the Table Name and Columns
@@ -29,11 +33,11 @@ Put the different nouns in this table. Replace the example with your own nouns.
 
 | Record                | Properties          |
 | --------------------- | ------------------  |
-| album                 | title, release year
+| movies                 | title, genre, release_year
 
-Name of the table (always plural): `albums` 
+Name of the table (always plural): `movies` 
 
-Column names: `title`, `release_year`
+Column names: `title`, `genre`, `release_year`
 
 ## 3. Decide the column types.
 
@@ -49,7 +53,8 @@ Remember to **always** have the primary key `id` as a first column. Its type wil
 
 id: SERIAL
 title: text
-release_year: int
+genre: text
+release_year: numeric
 ```
 
 ## 4. Write the SQL.
@@ -61,12 +66,19 @@ release_year: int
 -- Replace the table name, columm names and types.
 -- Dont change the id line.
 
-CREATE TABLE albums (
+CREATE TABLE movies (
   id SERIAL PRIMARY KEY,
   title text,
-  release_year int
+  genre text,
+  release_year numeric
 );
 ```
+
+CREATE TABLE students (
+  id SERIAL PRIMARY KEY,
+  name text,
+  year_of_birthday numeric
+);
 
 ## 5. Create the table.
 
